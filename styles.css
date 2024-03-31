@@ -1,0 +1,85 @@
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+::-webkit-scrollbar-thumb {
+    display: none;
+}
+* {
+    scrollbar-width: none;
+}
+html,body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+/*폰트*/
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*헤더*/
+.CodeForceHeader {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #252525;
+    color: #ffffff;
+    font-family: 'DungGeunMo';
+    font-size: 40px;
+    padding: 50px;
+    line-height: 80px;
+}
+.Logo {
+    width: 100px;
+    height: auto;
+    padding-left:70px;
+}
+/*홈*/
+.Home {
+    height: 70vh;
+}
+.Title {
+    position: absolute;
+    font-size: 220px;
+    left:500px;
+    font-family: 'DungGeunMo';
+}
+/*소개*/
+.Infomation {
+    height: 80vh;
+    background-color: rgb(116, 115, 115);
+}
+.I_Title {
+    position: relative;
+    font-family: 'DungGeunMo';
+    font-size: 30px;
+}
+#i1 {
+    left: 500px;
+}
+
+/*득쌤*/
+.Dcoder {
+    height: 50vh;
+}
+/*활동정보*/
+.Activity {
+    height: 50vh;
+    background-color: black;
+}
+/*이벤트*/
+.Event {
+    height: 100vh;
+}
+/*정보*/
+.ClubInfo {
+    height: 40vh;
+    background-color: black;
+}
+
