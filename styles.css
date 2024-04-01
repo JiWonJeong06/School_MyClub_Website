@@ -1,13 +1,4 @@
-::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-}
-::-webkit-scrollbar-thumb {
-    display: none;
-}
-* {
-    scrollbar-width: none;
-}
+
 html,body {
     margin: 0;
     padding: 0;
@@ -35,6 +26,7 @@ html,body {
     padding: 50px;
     line-height: 80px;
     z-index: 1;
+    cursor: pointer;
 }
 .Logo {
     width: 100px;
@@ -48,8 +40,9 @@ html,body {
 .Title {
     position: absolute;
     font-size: 220px;
-    left:500px;
+    left: 60%;
     font-family: 'DungGeunMo';
+    transform: translate(-50%,0%);
 }
 /*소개*/
 .Infomation {

@@ -11,12 +11,12 @@
 <body>
  
         <header class="CodeForceHeader">
-            <img src="img/codeforce_logo_w.png" class="Logo">
-            <p>소개</p>
-            <p>득쌤</p>
-            <p>활동</p>
-            <p>이벤트</p>
-            <p>정보</p>
+            <img src="img/codeforce_logo_w.png" class="Logo" onclick="Scroll('.Home')">
+            <p onclick="Scroll('.Infomation')">소개</p>
+            <p onclick="Scroll('.Dcoder')">득쌤</p>
+            <p onclick="Scroll('.Activity')">활동</p>
+            <p onclick="Scroll('.Event')" >이벤트</p>
+            <p onclick="Scroll('.ClubInfo')">정보</p>
         </header>
             
 
@@ -26,7 +26,7 @@
     </div>
     <!--소개-->
     <div class="Infomation">
-        <p class="I_Title" id="i1">울산경의고등학교의 정보 교과 동아리, 담당 선생님은 안득하 선생님이다.</p>
+        <p class="I_Title" id="i1"></p>
 
     </div>
     <!--득쌤-->
@@ -49,6 +49,10 @@
     
     <script>
         //스크롤 함수
+        function Scroll(className) {
+            const element = document.querySelector(className);
+            element.scrollIntoView({ behavior: 'smooth'});
+        }
         //이벤트 함수
         //웹페이지 함수
         //다운 함수
