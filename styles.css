@@ -14,7 +14,7 @@ html,body {
 }
 
 /*헤더*/
-.CodeForceHeader {
+.CodeForceHeader{
     position: fixed;
     top: 0;
     height: 100vh;
@@ -47,27 +47,29 @@ html,body {
 /*소개*/
 .Infomation {
     height: 50vh;
+    font-family: 'DungGeunMo';
     background-color: rgb(116, 115, 115);
 }
 .I_Title {
     position: absolute;
-    font-family: 'DungGeunMo';
     font-size: 30px;
     transform: translate(-50%,0%);
     left: 60%;
 }
-.I_cotent {
-    font-size: 50px;
-    position: relative;
+.I_content {
+    font-size: 40px;
+    position: absolute;
+    left: 60%;
+    transform: translate(-50%,250%);
 }
 
 /*득쌤*/
 .Dcoder {
     height: 50vh;
+    font-family: 'DungGeunMo';
 }
 .D_Title {
     position: absolute;
-    font-family: 'DungGeunMo';
     font-size: 30px;
     transform: translate(-50%,0%);
     left: 60%;
@@ -75,17 +77,18 @@ html,body {
 .D_content {
     font-size: 40px;
     position: absolute;
-    left: 30%;
-    top: 50%;
+    left: 60%;
+    transform: translate(-50%,250%);
+    
 }
 /*활동정보*/
 .Activity {
     height: 50vh;
+    font-family: 'DungGeunMo';
     background-color: rgb(99, 98, 98);
 }
 .A_Title {
     position: absolute;
-    font-family: 'DungGeunMo';
     font-size: 30px;
     transform: translate(-50%,0%);
     left: 60%;
@@ -93,16 +96,16 @@ html,body {
 .A_content {
     font-size: 40px;
     position: absolute;
-    left: 30%;
-    top: 50%;
+    left: 60%;
+    transform: translate(-50%,250%);
 }
 /*이벤트*/
 .Event {
     height: 100vh;
+    font-family: 'DungGeunMo';
 }
 .E_Title {
     position: absolute;
-    font-family: 'DungGeunMo';
     font-size: 30px;
     transform: translate(-50%,0%);
     left: 60%;
@@ -110,8 +113,8 @@ html,body {
 .E_content {
     font-size: 40px;
     position: absolute;
-    left: 30%;
-    top: 50%;
+    left: 60%;
+    transform: translate(-50%,250%);
 }
 /*정보*/
 .ClubInfo {
