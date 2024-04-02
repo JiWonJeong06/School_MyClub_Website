@@ -46,30 +46,50 @@ html,body {
 }
 /*소개*/
 .Infomation {
-    height: 80vh;
+    height: 50vh;
     background-color: rgb(116, 115, 115);
 }
 .I_Title {
-    position: relative;
+    position: absolute;
     font-family: 'DungGeunMo';
     font-size: 30px;
-}
-#i1 {
-    left: 500px;
+    transform: translate(-50%,0%);
+    left: 60%;
 }
 
 /*득쌤*/
 .Dcoder {
     height: 50vh;
 }
+.D_Title {
+    position: absolute;
+    font-family: 'DungGeunMo';
+    font-size: 30px;
+    transform: translate(-50%,0%);
+    left: 60%;
+}
 /*활동정보*/
 .Activity {
     height: 50vh;
-    background-color: black;
+    background-color: rgb(99, 98, 98);
+}
+.A_Title {
+    position: absolute;
+    font-family: 'DungGeunMo';
+    font-size: 30px;
+    transform: translate(-50%,0%);
+    left: 60%;
 }
 /*이벤트*/
 .Event {
     height: 100vh;
+}
+.E_Title {
+    position: absolute;
+    font-family: 'DungGeunMo';
+    font-size: 30px;
+    transform: translate(-50%,0%);
+    left: 60%;
 }
 /*정보*/
 .ClubInfo {
