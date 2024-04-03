@@ -36,13 +36,14 @@ html,body {
 /*홈*/
 .Home {
     height: 70vh;
+    background-color: #252525;
 }
 .Title {
     position: absolute;
     font-size: 200px;
     left: 60%;
     font-family: 'DungGeunMo';
-    transform: translate(-55%,0%);
+    transform: translate(-50%,0%);
 }
 /*소개*/
 .Infomation {
@@ -66,19 +67,19 @@ html,body {
 .I_content {
     font-size: 30px;
     position: absolute;
-    left: 60%;
+    left: 55%;
     transform: translate(0%,400%);
 }
 .I1_content {
     font-size: 30px;
     position: absolute;
-    left: 60%;
+    left: 55%;
     transform: translate(0%,650%);
 }
 .I2_content {
     font-size: 30px;
     position: absolute;
-    left: 60%;
+    left: 55%;
     transform: translate(0%,900%);
 }
 
@@ -118,19 +119,19 @@ html,body {
 .D1_content {
     font-size: 30px;
     position: absolute;
-    left: 60%;
+    left: 55%;
     transform: translate(0%,300%);
 }
 .D2_content {
     font-size: 30px;
     position: absolute;
-    left: 60%;
+    left: 55%;
     transform: translate(0%,600%);
 }
 .D3_content {
     font-size: 30px;
     position: absolute;
-    left: 60%;
+    left: 55%;
     transform: translate(0%,680%);
     cursor: pointer;
 }
