@@ -5,4 +5,11 @@ function Scroll(className) {
 }
 //이벤트 함수
 //웹페이지 함수
+
+function GoToPagedcoder() {
+    document.location.href  = "http://www.dcoder.kr/"
+}
+function GoToPageRank() {
+    document.location.href  = "http://www.dcoder.kr/ranklist.php"
+}
 //다운 함수

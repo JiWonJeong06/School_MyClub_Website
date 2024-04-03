@@ -48,7 +48,14 @@ html,body {
 .Infomation {
     height: 50vh;
     font-family: 'DungGeunMo';
-    background-color: rgb(116, 115, 115);
+}
+.I_Logo {
+    width: 20%;
+    height: auto;
+    font-size: 40px;
+    position: absolute;
+    left: 30%;
+    transform: translate(0%,15%);
 }
 .I_Title {
     position: absolute;
@@ -57,10 +64,22 @@ html,body {
     left: 60%;
 }
 .I_content {
-    font-size: 40px;
+    font-size: 30px;
     position: absolute;
     left: 60%;
-    transform: translate(-50%,250%);
+    transform: translate(0%,400%);
+}
+.I1_content {
+    font-size: 30px;
+    position: absolute;
+    left: 60%;
+    transform: translate(0%,650%);
+}
+.I2_content {
+    font-size: 30px;
+    position: absolute;
+    left: 60%;
+    transform: translate(0%,900%);
 }
 
 /*득쌤*/
@@ -75,17 +94,51 @@ html,body {
     left: 60%;
 }
 .D_content {
-    font-size: 40px;
+    font-size: 3em;
+    position: absolute;
+    left: 30%;
+    background-color: white;
+    transform: translate(30%,30%);
+    font-family: 'DungGeunMo';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    padding-left: 1vw;
+    padding-right: 1vw; 
+}
+.D_content :hover {
+    background-color: rgb(183, 183, 183);
+    cursor: pointer;
+}
+.D_content img {
+    order: -1; 
+}
+.D1_content {
+    font-size: 30px;
     position: absolute;
     left: 60%;
-    transform: translate(-50%,250%);
-    
+    transform: translate(0%,300%);
 }
+.D2_content {
+    font-size: 30px;
+    position: absolute;
+    left: 60%;
+    transform: translate(0%,600%);
+}
+.D3_content {
+    font-size: 30px;
+    position: absolute;
+    left: 60%;
+    transform: translate(0%,680%);
+    cursor: pointer;
+}
+
 /*활동정보*/
 .Activity {
     height: 50vh;
     font-family: 'DungGeunMo';
-    background-color: rgb(99, 98, 98);
 }
 .A_Title {
     position: absolute;
@@ -128,6 +181,6 @@ html,body {
 }
 .C_Title {
     position: relative;
-    color: gray;
+    color: rgb(148, 148, 148);
     left:  12.5%;
 }
