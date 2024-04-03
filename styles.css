@@ -36,7 +36,6 @@ html,body {
 /*홈*/
 .Home {
     height: 70vh;
-    background-color: #252525;
 }
 .Title {
     position: absolute;
