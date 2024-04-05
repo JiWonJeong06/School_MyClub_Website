@@ -146,12 +146,34 @@ html,body {
     transform: translate(-50%,0%);
     left: 60%;
 }
-.A_content {
-    font-size: 40px;
+.A_btn {
+    font-size: 1.5em;
     position: absolute;
-    left: 60%;
-    transform: translate(-50%,250%);
+    background-color: white;
+    font-family: 'DungGeunMo';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+    border-radius: 20px; 
+    bottom: -118%;  
+    padding-left: 0;
+    padding-right: 0;
 }
+.A_content {
+    font-size: 12px;
+    font-family: 'Arial';
+}
+.A_btn img {
+    order: -1;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    padding-bottom: 15px;
+}
+
 /*이벤트*/
 .Event {
     height: 100vh;
