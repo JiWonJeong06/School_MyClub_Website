@@ -456,6 +456,9 @@ button {
      display: inline-block;
      padding-top: 19px;
 }
+.Services .Services-box img {
+     width: 40%;
+}
 
 .Services .Services-box i:hover {
      background: #ddd;
@@ -564,6 +567,10 @@ button {
      transition: ease-in all 0.1s;
      transform: scale(1.1);
 }
+.why .why-box img {
+     width: 50%;
+}
+
 
 .bg {
      font-size: 16px;
@@ -693,7 +700,13 @@ button {
      padding: 0 130px;
      padding-bottom: 60px;
 }
-
+.cont a {
+     color: #fff;
+     font-size: 17px;
+     line-height: 30px;
+     padding: 0 130px;
+     padding-bottom: 60px;
+}
 .copyright {
      padding: 20px 0px;
      background: #fff;
@@ -707,7 +720,7 @@ button {
 }
 
 .copyright a {
-     color: #1e1e1e;
+     color: #ffffff;
 }
 
 .copyright a:hover {
