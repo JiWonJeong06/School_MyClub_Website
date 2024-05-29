@@ -24,7 +24,12 @@
 @import url(nice-select.css);
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
-
+@font-face {
+     font-family: 'DungGeunMo';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ }
 * {
      box-sizing: border-box !important;
 }
@@ -36,7 +41,7 @@ html {
 body {
      color: #666666;
      font-size: 14px;
-     font-family: 'Roboto', sans-serif;
+     font-family: 'DungGeunMo';
      line-height: 1.80857;
      font-weight: normal;
 }
@@ -296,7 +301,7 @@ button {
 /*--------------------------------------------------------------------- layout new css ---------------------------------------------------------------------*/
 
 .header {
-     background: #0c0f38;
+     background: #2a2a2a;
      width: 100%;
      padding: 40px 40px 40px 40px;
 }
@@ -310,7 +315,7 @@ button {
 }
 
 .banner_main {
-     background: #0c0f38;
+     background: #2a2a2a;
      background-size: 100% 100%;
      background-repeat: no-repeat;
      padding-bottom: 90px;
@@ -318,22 +323,22 @@ button {
 
 .text-bg h1 {
      color: #fff;
-     font-size: 60px;
+     font-size: 80px;
      line-height: 80px;
-     padding-bottom: 25px;
+     padding-bottom: 10px;
      font-weight: bold;
 }
 
 .text-bg span {
-     color: #fdd430;
-     font-size: 40px;
-     line-height: 35px;
+     color: #dfbf67;
+     font-size: 50px;
+     line-height: 60px;
      font-weight: bold;
 }
 
 .text-bg p {
      color: #fff;
-     font-size: 17px;
+     font-size: 20px;
      line-height: 28px;
      padding: 40px 0;
 }
@@ -360,7 +365,7 @@ button {
 }
 
 .text-img figure img {
-     width: 80%;
+     width: 60%;
 }
 
 .titlepage {
@@ -426,8 +431,8 @@ button {
 .Services {
      margin-top: 90px;
      padding: 60px 0;
-     background: #0c0f38;
-     font-family: Poppins;
+     background: #2a2a2a;
+     
 }
 
 .Services .titlepage {
@@ -476,7 +481,7 @@ button {
 }
 
 .Services .Services-box:hover {
-     background: #8308eb;
+     background: #ffffff;
      transition: ease-in all 0.5s;
      cursor: pointer;
 }
@@ -502,7 +507,7 @@ button {
 }
 
 .read_more:hover {
-     background: #8308eb;
+     background: #ffffff;
      color: #fff;
 }
 
@@ -515,7 +520,7 @@ button {
 .why {
      margin-top: 90px;
      background: #ffff;
-     font-family: Poppins;
+ 
 }
 
 .why .titlepage {
@@ -575,7 +580,7 @@ button {
 }
 
 .bg:hover {
-     background: #8308eb;
+     background: #ffffff;
      color: #fff;
 }
 
@@ -586,12 +591,12 @@ button {
 /** contact section **/
 
 .contact {
-     padding-top: 90px;
-     font-family: Poppins;
+     padding-top: 50px;
+  
 }
 
 .main_form {
-     background: #0c0f38;
+     background: #2a2a2a;
      padding: 55px 55px;
      border-radius: 30px;
      margin-bottom: -58%;
@@ -632,7 +637,7 @@ button {
 }
 
 .contact .main_form .send:hover {
-     background-color: #8308eb;
+     background-color: #ffffff;
      transition: ease-in all 0.5s;
      color: #fff;
 }
@@ -655,13 +660,13 @@ button {
 /** footer **/
 
 .footer {
-     font-family: Poppins;
-     background: #0c0f38;
-}
 
+     background: #2a2a2a;
+}
+/** ---height--- **/
 .cont {
      text-align: center;
-     margin-top: 31%;
+     margin-top: 10%;
 }
 
 .cont h3 {
@@ -674,7 +679,7 @@ button {
 
 .cont span {
      color: #fff;
-     font-size: 30px;
+     font-size: 15px;
      line-height: 30px;
      padding: 30px 0px 30px 0px;
      display: inline-block;
