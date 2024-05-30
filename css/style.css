@@ -74,7 +74,7 @@ h6 {
 }
 
 h1 {
-     font-size: 24px
+     font-size: 26px
 }
 
 h2 {
@@ -426,7 +426,7 @@ button {
 /** end Hosting section **/
 
 
-/** Services section **/
+/** Project section **/
 
 .Services {
      margin-top: 90px;
@@ -460,9 +460,6 @@ button {
      width: 40%;
 }
 
-.Services .Services-box i:hover {
-     background: #ddd;
-}
 
 .Services .Services-box h3 {
      padding: 20px 0px 20px 0px;
@@ -484,7 +481,7 @@ button {
 }
 
 .Services .Services-box:hover {
-     background: #ffffff;
+     background: #737373;
      transition: ease-in all 0.5s;
      cursor: pointer;
 }
@@ -518,7 +515,7 @@ button {
 /** end Services section **/
 
 
-/** why section **/
+/** event section **/
 
 .why {
      margin-top: 90px;
@@ -707,26 +704,6 @@ button {
      padding: 0 130px;
      padding-bottom: 60px;
 }
-.copyright {
-     padding: 20px 0px;
-     background: #fff;
-}
-
-.copyright p {
-     color: #1e1e1e;
-     font-size: 18px;
-     line-height: 22px;
-     text-align: center;
-}
-
-.copyright a {
-     color: #ffffff;
-}
-
-.copyright a:hover {
-     color: #0c0f38;
-}
-
 
 /** end footer **/
 
