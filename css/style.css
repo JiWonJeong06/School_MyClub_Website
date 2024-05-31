@@ -44,6 +44,10 @@ body {
      font-family: 'DungGeunMo';
      line-height: 1.80857;
      font-weight: normal;
+     overflow-x: hidden; 
+}
+body::-webkit-scrollbar {
+     display: none;
 }
 
 a {
@@ -330,7 +334,7 @@ button {
 }
 
 .text-bg span {
-     color: #dfbf67;
+     color: #ffffff;
      font-size: 50px;
      line-height: 60px;
      font-weight: bold;
@@ -418,7 +422,7 @@ button {
 }
 
 .web_hosting a:hover {
-     background-color: #0c0f38;
+     background-color: #555555;
      color: #fff;
 }
 
@@ -565,7 +569,7 @@ button {
      transform: scale(1.1);
 }
 .why .why-box img {
-     width: 50%;
+     width: 60%;
 }
 
 

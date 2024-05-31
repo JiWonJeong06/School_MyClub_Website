@@ -370,3 +370,10 @@ $(function () {
 
 
 });
+
+function event1() {
+	window.open('https://www.usmbc.co.kr/article/ip_HetGW_N7Q_or2E-q', '_blank');
+}
+function event2() {
+	window.open('https://openai.com/index/hello-gpt-4o/', '_blank');
+}
