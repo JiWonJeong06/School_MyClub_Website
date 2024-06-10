@@ -371,22 +371,22 @@ $(function () {
 
 });
 function project1() {
-	window.location.href = 'project.html';
+	window.location.href = 'project=1.html';
 }
 function project2() {
-	window.location.href = 'project2.html';
+	window.location.href = 'project=2.html';
 }
 function project3() {
-	window.location.href = 'project3.html';
+	window.location.href = 'project=3.html';
 }
 function project4() {
-	window.location.href = 'project4.html';
+	window.location.href = 'project=4.html';
 }
 function project5() {
-	window.location.href = 'project5.html';
+	window.location.href = 'project=5.html';
 }
 function project6() {
-	window.location.href = 'project6.html';
+	window.location.href = 'project=6.html';
 }
 function event1() {
 	window.open('https://www.usmbc.co.kr/article/ip_HetGW_N7Q_or2E-q', '_blank');
@@ -394,3 +394,11 @@ function event1() {
 function event2() {
 	window.open('https://openai.com/index/hello-gpt-4o/', '_blank');
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+	const currentUrl = window.location.pathname;
+	if (currentUrl.endsWith(".html")) {
+	const newUrl = currentUrl.replace(/\.html$/, '');
+		window.history.replaceState(null, '', newUrl);
+	}
+});
