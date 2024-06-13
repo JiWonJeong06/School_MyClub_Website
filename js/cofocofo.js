@@ -8,7 +8,7 @@ function RandomQuestion() {
     const input = document.getElementById('fileInput');
     const files = input.files;
 
-    if (files.length > 0) {
+    if (files.length == 0) {
         alert('Please select some images first.');
         return;}
     
