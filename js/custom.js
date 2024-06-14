@@ -394,6 +394,9 @@ function event1() {
 function event2() {
 	window.open('https://openai.com/index/hello-gpt-4o/', '_blank');
 }
+function event3() {
+	
+}
 
 document.addEventListener("DOMContentLoaded", function() {
 	const currentUrl = window.location.pathname;

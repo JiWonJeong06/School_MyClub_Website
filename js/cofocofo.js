@@ -5,36 +5,75 @@ var score = document.getElementById('score');
 var Ranbutton = document.getElementById('randomButton');
 var InputDown = document.getElementById('InputDown');
 var Surren = document.getElementById('surrenderButton');
-var addscore = -1;
+var ImageQuestion = document.getElementById('preview');
+var addscore = 0;
 
-var preview = document.getElementById('preview');
 
 var Questions = [
-    
+    '경동대학교',
+    '경성대학교',
+    '경운대학교',
+    '고신대학교',
+    '경희대학교(서울)',
+    '고려대학교(서울)',
+    '경찰대학교'
 ];
+
 Surren.disabled = true;
 InputDown.disabled = true;
+
+
+function RandomQuestion() {
+    var radomImage = Math.floor(Math.random() * Questions.length);
+    return Questions[radomImage];
+
+}
+function UploadIamge() {
+   var randomimage = RandomQuestion();
+   ImageQuestion.src = 'picture/logo/' + randomimage + '.png';
+} 
+
+function AnswerSame() {
+    UploadIamge();
+
+    var MyAnswer = InputDown.value;
+    alert(RandomQuestion());
+    if(RandomQuestion() == MyAnswer) {
+        addscore++;
+        score.textContent = '점수: ' + addscore;
+        alert('정답');
+        InputDown.value = ""
+    }
+    else{
+        alert('틀렸다.');
+    }
+ }
+
+
 //버튼과 엔터를 눌렀을 때 상호 작용과 점수 올리기
 if (Ranbutton && InputDown) {
     
     Ranbutton.addEventListener('click', function(){
-    alert('버튼 클릭');
-    Ranbutton.textContent = "Enter";
-    addscore++;
-    score.textContent = '점수: ' + addscore;
-    Surren.disabled = false;
-    InputDown.disabled = false;
+    if (InputDown.disabled === true) { 
+        alert('게임시작'); 
+        Ranbutton.textContent = "엔터";
+        Surren.disabled = false;
+        InputDown.disabled = false;
+    }
+    else{
+
+    AnswerSame();
+
+   
+    }
 });
     InputDown.addEventListener('keydown', function(event) {
     if(event.key == 'Enter') {
-        alert('Enter 동작 감지');
-        Ranbutton.textContent = "Enter";
-        addscore++;
-        score.textContent = '점수: ' + addscore;
+        Ranbutton.textContent = "엔터";
+        AnswerSame();
         Surren.disabled = false;
     }
 });
-
 }
 
 
@@ -42,7 +81,7 @@ if (Ranbutton && InputDown) {
 //포기하고 다시하기 버튼
 if (Surren) {
     Surren.addEventListener('click', function(){
-    alert('게임 종료');
+    if(!(Surren.textContent === '다시하기')) {alert('게임 종료');}
     score.textContent = '최종 점수: ' + addscore;
     Ranbutton.disabled = true;
     InputDown.disabled = true;
