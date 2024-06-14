@@ -1,96 +1,88 @@
-//질문 (랜덤으로 뽑기)
-//질문과 답과 같은 지 확인하기
-
 var score = document.getElementById('score');
-var Ranbutton = document.getElementById('randomButton');
+var Startbutton = document.getElementById('Startbutton');
 var InputDown = document.getElementById('InputDown');
 var Surren = document.getElementById('surrenderButton');
 var ImageQuestion = document.getElementById('preview');
+var Guider = document.getElementById('Guide');
 var addscore = 0;
-
-
+var GameImage = "images/main cofocofo.png";
 var Questions = [
-    '경동대학교',
-    '경성대학교',
-    '경운대학교',
-    '고신대학교',
-    '경희대학교(서울)',
-    '고려대학교(서울)',
-    '경찰대학교'
-];
 
+];
+var currentImage = ''; // 현재 이미지를 저장할 변수
+
+// 초기에는 버튼 비활성화
 Surren.disabled = true;
 InputDown.disabled = true;
 
+// 게임 시작
+function Start() {
+    Guider.textContent ='※안내※ 게임 시작';
+    Surren.disabled = false;
+    InputDown.disabled = false;
+    Startbutton.disabled = true;
+    RandomQuestion(); // 게임 시작 시 첫 번째 질문 표시
+}
 
+Startbutton.addEventListener('click', Start);
+
+
+
+
+
+
+// 랜덤 질문
 function RandomQuestion() {
-    var radomImage = Math.floor(Math.random() * Questions.length);
-    return Questions[radomImage];
-
+    if(Questions.length === 0) {
+        Guider.textContent ='※안내※ 문제가 더 이상 없습니다.';
+        score.textContent = '최종 점수: ' + addscore+' 점';
+        Surren.disabled = true;
+        InputDown.disabled = true;
+        Surren.textContent = '다시하기';
+        ImageQuestion.src = GameImage;
+        return;
+        }
+        
+    var randomIndex = Math.floor(Math.random() * Questions.length);
+    currentImage = Questions[randomIndex]; // 현재 질문 저장
+    ImageQuestion.src = 'picture/logo/' + currentImage + '.png';
+    Questions.splice(randomIndex, 1);
 }
-function UploadIamge() {
-   var randomimage = RandomQuestion();
-   ImageQuestion.src = 'picture/logo/' + randomimage + '.png';
-} 
 
-function AnswerSame() {
-    UploadIamge();
-
-    var MyAnswer = InputDown.value;
-    alert(RandomQuestion());
-    if(RandomQuestion() == MyAnswer) {
-        addscore++;
-        score.textContent = '점수: ' + addscore;
-        alert('정답');
-        InputDown.value = ""
-    }
-    else{
-        alert('틀렸다.');
-    }
- }
-
-
-//버튼과 엔터를 눌렀을 때 상호 작용과 점수 올리기
-if (Ranbutton && InputDown) {
+// 정답 확인
+function FactCheck() {
+    var MyAnswer = InputDown.value.toLowerCase().replace(/\s/g, '');
     
-    Ranbutton.addEventListener('click', function(){
-    if (InputDown.disabled === true) { 
-        alert('게임시작'); 
-        Ranbutton.textContent = "엔터";
-        Surren.disabled = false;
-        InputDown.disabled = false;
+    if (MyAnswer === currentImage) {
+        Guider.textContent ='※안내※ 정답';
+        addscore++;
+    } else {
+        Guider.textContent ='※안내※ 오답';
     }
-    else{
-
-    AnswerSame();
-
-   
-    }
-});
-    InputDown.addEventListener('keydown', function(event) {
-    if(event.key == 'Enter') {
-        Ranbutton.textContent = "엔터";
-        AnswerSame();
-        Surren.disabled = false;
-    }
-});
+    score.textContent = '점수: ' + addscore+' 점';
+    InputDown.value = "";
+    RandomQuestion(); // 다음 질문 로드
+    Surren.disabled = false;
 }
 
+InputDown.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        FactCheck();
+    }
+});
 
-
-//포기하고 다시하기 버튼
+// 포기 및 다시하기 버튼
 if (Surren) {
     Surren.addEventListener('click', function(){
-    if(!(Surren.textContent === '다시하기')) {alert('게임 종료');}
-    score.textContent = '최종 점수: ' + addscore;
-    Ranbutton.disabled = true;
-    InputDown.disabled = true;
-    Surren.textContent = '다시하기';
-    if (Surren.textContent === '다시하기') {
-        Surren.addEventListener('click', function() {
+        if (Surren.textContent !== '다시하기') {
+            ImageQuestion.src = GameImage;
+            Guider.textContent ='※안내※ 게임 포기';
+            score.textContent = '최종 점수: ' + addscore+' 점';
+            Startbutton.disabled = true;
+            InputDown.disabled = true;
+            Surren.textContent = '다시하기';
+        } else {
             location.reload();
-        });   
-    }
-    
-});
+        }
+    });
 }

@@ -404,4 +404,4 @@ document.addEventListener("DOMContentLoaded", function() {
 	const newUrl = currentUrl.replace(/\.html$/, '');
 		window.history.replaceState(null, '', newUrl);
 	}
-});
+}); 
