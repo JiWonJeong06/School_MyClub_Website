@@ -45,7 +45,7 @@ function RandomQuestion() {
         
     var randomIndex = Math.floor(Math.random() * Questions.length);
     currentImage = Questions[randomIndex]; // 현재 질문 저장
-    ImageQuestion.src = 'picture/logo/' + currentImage + '.png';
+    ImageQuestion.src = 'CofoCofoQuestion' + currentImage + '.png';
     Questions.splice(randomIndex, 1);
 }
 
