@@ -59,7 +59,7 @@ function FactCheck() {
         Guider.textContent ='※안내※ 정답';
         addscore++;
     } else {
-        Guider.textContent ='※안내※ 오답' +'답: '+ currentImage;
+        Guider.textContent ='※안내※ 오답' +' [답: '+ currentImage+']';
     }
     
     score.textContent = '점수: ' + addscore+' 점';

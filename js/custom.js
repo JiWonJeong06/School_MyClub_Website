@@ -395,9 +395,9 @@ function event2() {
 	window.open('https://openai.com/index/hello-gpt-4o/', '_blank');
 }
 function event3() {
-	
+	window.open('cofocofo.io.html', '_blank');
 }
-/*
+
 document.addEventListener("DOMContentLoaded", function() {
 	const currentUrl = window.location.pathname;
 	if (currentUrl.endsWith(".html")) {
@@ -405,4 +405,3 @@ document.addEventListener("DOMContentLoaded", function() {
 		window.history.replaceState(null, '', newUrl);
 	}
 }); 
-*/
