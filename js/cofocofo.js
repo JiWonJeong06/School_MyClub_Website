@@ -7,6 +7,8 @@ var Guider = document.getElementById('Guide');
 var addscore = 0;
 var GameImage = "images/main cofocofo.png";
 var Questions = [
+   'kr','jp','zm','za','yt'
+
 
 ];
 var currentImage = ''; // 현재 이미지를 저장할 변수
@@ -27,10 +29,6 @@ function Start() {
 Startbutton.addEventListener('click', Start);
 
 
-
-
-
-
 // 랜덤 질문
 function RandomQuestion() {
     if(Questions.length === 0) {
@@ -45,7 +43,7 @@ function RandomQuestion() {
         
     var randomIndex = Math.floor(Math.random() * Questions.length);
     currentImage = Questions[randomIndex]; // 현재 질문 저장
-    ImageQuestion.src = 'CofoCofoQuestion' + currentImage + '.png';
+    ImageQuestion.src = 'CofoCofoQuestion/' + currentImage + '.png';
     Questions.splice(randomIndex, 1);
 }
 
@@ -59,6 +57,7 @@ function FactCheck() {
     } else {
         Guider.textContent ='※안내※ 오답';
     }
+    
     score.textContent = '점수: ' + addscore+' 점';
     InputDown.value = "";
     RandomQuestion(); // 다음 질문 로드
@@ -72,7 +71,7 @@ InputDown.addEventListener('keydown', function(event) {
 });
 
 // 포기 및 다시하기 버튼
-if (Surren) {
+if (Surren ) {
     Surren.addEventListener('click', function(){
         if (Surren.textContent !== '다시하기') {
             ImageQuestion.src = GameImage;

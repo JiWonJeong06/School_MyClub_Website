@@ -397,7 +397,7 @@ function event2() {
 function event3() {
 	
 }
-
+/*
 document.addEventListener("DOMContentLoaded", function() {
 	const currentUrl = window.location.pathname;
 	if (currentUrl.endsWith(".html")) {
@@ -405,3 +405,4 @@ document.addEventListener("DOMContentLoaded", function() {
 		window.history.replaceState(null, '', newUrl);
 	}
 }); 
+*/
