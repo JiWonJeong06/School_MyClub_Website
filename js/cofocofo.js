@@ -6,6 +6,9 @@ var ImageQuestion = document.getElementById('preview');
 var Guider = document.getElementById('Guide');
 var addscore = 0;
 var GameImage = "images/main cofocofo.png";
+var FactSound = document.getElementById('EventSound');
+var successEffect = new Audio('CofoCofoEffect/success.mp3');
+var overEffect = new Audio('CofoCofoEffect/over.mp3');
 var Questions = [
    '남극','네팔','노르웨이','대한민국','미국','바레인','방글라데시','베냉','베트남','벨기에','벨라루스','벨리즈','보스니아헤르체고비나',
    '보츠와나','볼리비아','부르키나파소','부탄','북아일랜드','불가리아','브라질','브루나이','소말리아','수리남','스위스','스코틀랜드','아랍에미리트',
@@ -62,8 +65,12 @@ function FactCheck() {
     if (MyAnswer === currentImage) {
         Guider.textContent ='※안내※ 정답';
         addscore++;
+        successEffect.play();
+        
+
     } else {
         Guider.textContent ='※안내※ 오답' +' [답: '+ currentImage+']';
+        overEffect.play();
     }
     
     score.textContent = '점수: ' + addscore+' 점';
