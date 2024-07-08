@@ -398,18 +398,6 @@ function event3() {
 	window.open('cofocofo.io.html', '_blank');
 }
 
-document.getElementById('download-zip').addEventListener('click', function() {
-	var zip = new JSZip();
-
-
-	// 파일을 압축하여 Blob으로 생성
-	zip.generateAsync({type:"blob"})
-	.then(function(content) {
-		// Blob을 다운로드
-		saveAs(content, "DOGRUNNER.zip");
-	});
-});
-
 
 
 document.addEventListener("DOMContentLoaded", function() {
